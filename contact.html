@@ -2,25 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact – Intrepids Plantations</title>
+  <title>Intrepids Plantations – [contact]</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <img 
-      src="https://scontent.fnbo16-1.fna.fbcdn.net/v/t1.6435-9/73320654_2684984368211359_2935513668965629952_n.jpg"
-      alt="Intrepids Plantations"
-      width="250"
-    />
-    <h1>Contact Us</h1>
+  src="https://scontent.fnbo16-1.fna.fbcdn.net/v/t1.6435-9/73320654_2684984368211359_2935513668965629952_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Y9YSzd_BkncQ7kNvwEGAE10&_nc_oc=AdmqhGMIbn2oyDPDvl50DX5gEkiCKmUbacCmrooLT04j4jGU7SM3MvaXjxvcN_oL1ls&_nc_zt=23&_nc_ht=scontent.fnbo16-1.fna&_nc_gid=CTxWpxn2Y9zbpvrASzUUQQ&oh=00_AfRHMcOj1Lg-XrYQx-Mi3D7NO5R-t7sNH5ybEwBmyJHnCg&oe=68911ADB"
+  alt="Intrepids Plantations"
+  width="250"
+  />
+
+    <h1>Intrepids Plantations</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="ourservices.html">Our Services</a>
+      <a href="about.html">About-Us</a>
+      <a href="ourservices.html">Our-Services</a>
       <a href="contact.html">Contact</a>
       <a href="gallery.html">Gallery</a>
     </nav>
   </header>
+  <section id="contact">
+  <h2>Contact</h2>
+  <p>Fill in the form below and we’ll get back to you shortly.</p>
+
+  <form action="https://formspree.io/f/xblyekzo" method="POST" onsubmit="sendToWhatsApp()" style="max-width: 500px; margin: 0 auto;">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+    <label for="name">Your Name</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+    <label for="email">Your Email</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+    <label for="message">Your Message</label><br>
+    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
+
+    <button type="submit" style="padding: 10px 20px; background-color: #2e7d32; color: white; border: none; border-radius: 5px;">
+      📩 Send Message
+    </button>
+  </form>
+
+  <!-- Contact details below the form -->
+  <p style="margin-top: 30px;">
+    Email: intrepidsplantations@gmail.com<br>
+    Phone: +254 722271791
+  </p>
+
+</section>
+
+ <a href="https://wa.me/254722271791" target="_blank" style="
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width:24px; height:24px; margin-right:10px;">
+  Chat with us on WhatsApp
+</a>
+
+<a href="tel:+254722271791" style="
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone" style="width:20px; height:20px; margin-right:10px;">
+  Call Us Now
+</a>
+
+
+  <footer>
+    <p>© 2025 Intrepids Plantations. All rights reserved.</p>
+  </footer>
+  <!-- WhatsApp Messaging Script -->
+<script>
+  function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var phone = "254722271791"; // Your WhatsApp number (no +)
+
+    var text = `Hello Intrepids Plantations,%0A%0AMy name is *${name}* (%0AEmail: ${email})%0A%0A${message}`;
+
+    var whatsappURL = "https://wa.me/" + phone + "?text=" + encodeURI(text);
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+  }
+  </script>
 
   <section id="contact">
     <h2>Get in Touch</h2>
